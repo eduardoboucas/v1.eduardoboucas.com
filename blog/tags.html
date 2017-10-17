@@ -1,37 +1,1263 @@
----
- 
----
 <!DOCTYPE html>
 <html>
-	{% include blog/head.html %}
+	<head>
+    
+
+
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>Eduardo saying things</title>
+<meta name="description" content="My blog about web, my experience as a sharp programmer and a terrible dancer.">
+<link rel="alternate" type="application/rss+xml" title="Eduardo saying things" href="http://feeds.eduardoboucas.com/eduardoboucas" />
+<link href="/sitemap.xml" rel="sitemap" title="Sitemap" type="application/xml">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+<link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon" />
+
+<!-- Open graph -->
+<meta content="Eduardo saying things" property="og:site_name">
+<meta content="Eduardo saying things" property="og:title">
+<meta content="https://eduardoboucas.com/assets/images/bust.png" property="og:image">
+<meta content="blog" property="og:type">
+<meta content="" property="og:description">
+<meta content="https://eduardoboucas.com/blog/tags.html" property="og:url">
+
+<!-- Facebook stuff -->
+
+  
+
+  <meta content="https://www.facebook.com/eduardoboucas" property="article:author">
+
+  
+
+  
+
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:site" content="@eduardoboucas" />
+<meta name="twitter:image" content="https://eduardoboucas.com/assets/images/bust.png" />
+<meta name="twitter:title" content="Eduardo saying things" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:url" content="https://eduardoboucas.com/blog/tags.html" />
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://eduardoboucas.com/blog">
+
+    
+
+    
+
+    <script src="/js/vendor/jquery.min.js"></script>
+<script src="/js/blog.js"></script>
+<script src="/js/vendor/spinner.min.js"></script>
+<script src="/js/vendor/jekyll-search.js"></script>
+</head>
 	
 	<body class="body--blog">
 		<div class="content">
-			{% include blog/header.html %}
-			{% include blog/navigation.html %}
+			<div class="search-overlay">
+	<section class="search">
+	<div class="search__inner">
+			<svg  class="search__icon">
+	<use xlink:href="#icn--search"></use>
+</svg>
+			<input type="text" id="search__field" class="search__field" autoFocus>
+		</div>
+		<div id="search__results" class="search__results">
+		</div>
+	</section>
+	<button id="search__close" class="search__close">Close</button>
+</div>
+<header class="blog-header">
+  <div class="blog-header__back-to-site">
+  	<a class="blog__back-to-site" href="/">
+		<svg  class="page-navigation__arrow">
+	<use xlink:href="#icn--arrow"></use>
+</svg>
+		<svg  class="page-navigation__chair">
+	<use xlink:href="#icn--chair"></use>
+</svg>
+    </a>
+  </div>
+  <h1 class="blog-header__title"><a href="/blog/">Eduardo saying things.</a></h1>
+  <img alt="Drawing of Eduardo's bust" class="blog-header__bust" src="/assets/images/bust.png"/>
+  <button id="blog-header__search" class="blog-header__search">
+  	<svg  class="blog-header__search-icon">
+	<use xlink:href="#icn--search"></use>
+</svg>
+  </button>
+</header>
+			<p class="cta blog__back-to-posts"><a class="arrow--left" href="/blog">Back to all posts</a></p>
 			
 			<h2>Tags</h2>
-			{% assign sortedTags = (site.tags | sort:0) %}
-			{% for tag in sortedTags %}
-				<details id="tag-{{ tag[0] }}">
+			
+			
+				<details id="tag-ajax">
 					<summary>
-						<a name="{{ tag[0] }}">{{ tag[0] }} <span>({{ tag[1].size }})</span></a>
+						<a name="ajax">ajax <span>(1)</span></a>
 					</summary>
 					<ul>
-						{% for post in tag[1] %}
-							{% if post.external-url %}
-								<li><a href="{{ post.external-url }}">{{ post.title }}</a> — {{ post.date | date_to_string }}</li>
-							{% else %}
-								<li><a href="{{ post.url }}">{{ post.title }}</a> — {{ post.date | date_to_string }}</li>
-							{% endif %}
-						{% endfor %}
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
 					</ul>					
 				</details>
-			{% endfor %}
+			
+				<details id="tag-api">
+					<summary>
+						<a name="api">api <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="https://css-tricks.com/thoughts-on-an-api-first-wordpress/">Thoughts on an API-First WordPress</a> — 21 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-api-first">
+					<summary>
+						<a name="api-first">api-first <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="https://css-tricks.com/thoughts-on-an-api-first-wordpress/">Thoughts on an API-First WordPress</a> — 21 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-assets">
+					<summary>
+						<a name="assets">assets <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-backbonejs">
+					<summary>
+						<a name="backbonejs">backbonejs <span>(3)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/10/adding-ajax-pagination-to-jekyll.html">Adding Ajax pagination to Jekyll</a> — 10 Nov 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/25/how-i-used-jekyll-on-my-backbonejs-website.html">How I used Jekyll on my Backbone.js website</a> — 25 Oct 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/09/the-story-behind-my-website.html">The story behind my website</a> — 09 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-bem">
+					<summary>
+						<a name="bem">bem <span>(3)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/08/17/creating-a-bemit-grid-system-with-include-media.html">Creating a BEMIT grid system with include-media</a> — 17 Aug 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/04/27/bem-wrappers-and-nesting-and-why-i-love-twitter.html">BEM, wrappers and nesting (and why I love Twitter)</a> — 27 Apr 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/03/22/what-bem-did-to-my-css-specificity.html">What BEM did to my CSS specificity</a> — 22 Mar 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-bemit">
+					<summary>
+						<a name="bemit">bemit <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/08/17/creating-a-bemit-grid-system-with-include-media.html">Creating a BEMIT grid system with include-media</a> — 17 Aug 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-blog">
+					<summary>
+						<a name="blog">blog <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html">Thoughts on serving and monitoring a feed</a> — 20 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-butler">
+					<summary>
+						<a name="butler">butler <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-cache">
+					<summary>
+						<a name="cache">cache <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html">Supercharging Jekyll with a ServiceWorker</a> — 04 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-cms">
+					<summary>
+						<a name="cms">cms <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="https://css-tricks.com/thoughts-on-an-api-first-wordpress/">Thoughts on an API-First WordPress</a> — 21 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-code">
+					<summary>
+						<a name="code">code <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-comments">
+					<summary>
+						<a name="comments">comments <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/05/11/rethinking-the-commenting-system-for-my-jekyll-site.html">Rethinking the commenting system for my Jekyll site</a> — 11 May 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-css">
+					<summary>
+						<a name="css">css <span>(4)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/03/22/what-bem-did-to-my-css-specificity.html">What BEM did to my CSS specificity</a> — 22 Mar 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/22/a-cautious-and-calculated-venture-into-flexbox.html">A cautious and calculated venture into Flexbox</a> — 22 Jan 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/13/experimenting-with-sass-and-grids.html">Experimenting with Sass and grids</a> — 13 Jan 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/29/how-i-write-media-queries-in-sass.html">How I write media queries in Sass</a> — 29 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-details">
+					<summary>
+						<a name="details">details <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/16/creating-a-tags-page-in-jekyll.html">Creating a tags page in Jekyll</a> — 16 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-disqus">
+					<summary>
+						<a name="disqus">disqus <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-eduardoboucas.com">
+					<summary>
+						<a name="eduardoboucas.com">eduardoboucas.com <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/10/25/how-i-used-jekyll-on-my-backbonejs-website.html">How I used Jekyll on my Backbone.js website</a> — 25 Oct 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/09/the-story-behind-my-website.html">The story behind my website</a> — 09 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-expandable">
+					<summary>
+						<a name="expandable">expandable <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-feed">
+					<summary>
+						<a name="feed">feed <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html">Thoughts on serving and monitoring a feed</a> — 20 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-feedburner">
+					<summary>
+						<a name="feedburner">feedburner <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html">Thoughts on serving and monitoring a feed</a> — 20 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-figcaption">
+					<summary>
+						<a name="figcaption">figcaption <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-figure">
+					<summary>
+						<a name="figure">figure <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-flexbox">
+					<summary>
+						<a name="flexbox">flexbox <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/01/22/a-cautious-and-calculated-venture-into-flexbox.html">A cautious and calculated venture into Flexbox</a> — 22 Jan 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-generator">
+					<summary>
+						<a name="generator">generator <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/introduction-static-site-generators">An introduction to static site generators</a> — 21 May 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-github">
+					<summary>
+						<a name="github">github <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/05/11/rethinking-the-commenting-system-for-my-jekyll-site.html">Rethinking the commenting system for my Jekyll site</a> — 11 May 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-google-news">
+					<summary>
+						<a name="google-news">google-news <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/20/google-news-and-sponsored-content.html">Google News and sponsored content</a> — 20 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-grid">
+					<summary>
+						<a name="grid">grid <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/08/17/creating-a-bemit-grid-system-with-include-media.html">Creating a BEMIT grid system with include-media</a> — 17 Aug 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/13/experimenting-with-sass-and-grids.html">Experimenting with Sass and grids</a> — 13 Jan 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-grunt">
+					<summary>
+						<a name="grunt">grunt <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/03/19/rapid-deployment-with-sass.html">Rapid deployment with Sass</a> — 19 Mar 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-honeypot">
+					<summary>
+						<a name="honeypot">honeypot <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-html">
+					<summary>
+						<a name="html">html <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/27/bem-wrappers-and-nesting-and-why-i-love-twitter.html">BEM, wrappers and nesting (and why I love Twitter)</a> — 27 Apr 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-html5">
+					<summary>
+						<a name="html5">html5 <span>(5)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/12/battling-with-ie8-html5-shiv-and-svg.html">Battling with IE8: HTML5 shiv and SVG</a> — 12 Feb 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/22/a-cautious-and-calculated-venture-into-flexbox.html">A cautious and calculated venture into Flexbox</a> — 22 Jan 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/16/creating-a-tags-page-in-jekyll.html">Creating a tags page in Jekyll</a> — 16 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-ie8">
+					<summary>
+						<a name="ie8">ie8 <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/12/battling-with-ie8-html5-shiv-and-svg.html">Battling with IE8: HTML5 shiv and SVG</a> — 12 Feb 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-ifttt">
+					<summary>
+						<a name="ifttt">ifttt <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/28/sharing-jekyll-posts-on-social-media-using-front-matter-and-ifttt.html">Sharing Jekyll posts on social media using front matter and IFTTT</a> — 28 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-images">
+					<summary>
+						<a name="images">images <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-include-media">
+					<summary>
+						<a name="include-media">include-media <span>(8)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/08/17/creating-a-bemit-grid-system-with-include-media.html">Creating a BEMIT grid system with include-media</a> — 17 Aug 2015</li>
+							
+						
+							
+								<li><a href="http://davidwalsh.name/generating-alternative-stylesheets-browsers-media">Generating alternative stylesheets for browsers without @media</a> — 27 Jul 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/29/exporting-breakpoints-from-css-to-javascript-with-include-media.html">Exporting breakpoints from CSS to JavaScript with include-media</a> — 29 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/08/include-media-v1-3-released.html">include-media v1.3 released</a> — 08 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/05/20/include-media-v1-2-released.html">include-media v1.2 released</a> — 20 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/02/01/writing-media-queries-for-retina-devices-with-include-media.html">Writing media queries for Retina devices with include-media</a> — 01 Feb 2015</li>
+							
+						
+							
+								<li><a href="http://davidwalsh.name/sass-media-query">Write simple, elegant and maintainable media queries with Sass</a> — 05 Jan 2015</li>
+							
+						
+							
+								<li><a href="https://css-tricks.com/approaches-media-queries-sass/">Approaches to media queries in Sass</a> — 30 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-javascript">
+					<summary>
+						<a name="javascript">javascript <span>(5)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/29/exporting-breakpoints-from-css-to-javascript-with-include-media.html">Exporting breakpoints from CSS to JavaScript with include-media</a> — 29 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html">Supercharging Jekyll with a ServiceWorker</a> — 04 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-jekyll">
+					<summary>
+						<a name="jekyll">jekyll <span>(10)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html">Supercharging Jekyll with a ServiceWorker</a> — 04 Jun 2015</li>
+							
+						
+							
+								<li><a href="http://davidwalsh.name/introduction-static-site-generators">An introduction to static site generators</a> — 21 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/05/11/rethinking-the-commenting-system-for-my-jekyll-site.html">Rethinking the commenting system for my Jekyll site</a> — 11 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/04/28/sharing-jekyll-posts-on-social-media-using-front-matter-and-ifttt.html">Sharing Jekyll posts on social media using front matter and IFTTT</a> — 28 Apr 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/07/including-and-managing-images-in-jekyll.html">Including and managing images in Jekyll</a> — 07 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html">Thoughts on serving and monitoring a feed</a> — 20 Nov 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/16/creating-a-tags-page-in-jekyll.html">Creating a tags page in Jekyll</a> — 16 Nov 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/11/10/adding-ajax-pagination-to-jekyll.html">Adding Ajax pagination to Jekyll</a> — 10 Nov 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/25/how-i-used-jekyll-on-my-backbonejs-website.html">How I used Jekyll on my Backbone.js website</a> — 25 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-json">
+					<summary>
+						<a name="json">json <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/29/exporting-breakpoints-from-css-to-javascript-with-include-media.html">Exporting breakpoints from CSS to JavaScript with include-media</a> — 29 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-linkedin">
+					<summary>
+						<a name="linkedin">linkedin <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-markdown">
+					<summary>
+						<a name="markdown">markdown <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-media">
+					<summary>
+						<a name="media">media <span>(7)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/generating-alternative-stylesheets-browsers-media">Generating alternative stylesheets for browsers without @media</a> — 27 Jul 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/08/include-media-v1-3-released.html">include-media v1.3 released</a> — 08 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/05/20/include-media-v1-2-released.html">include-media v1.2 released</a> — 20 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/04/28/sharing-jekyll-posts-on-social-media-using-front-matter-and-ifttt.html">Sharing Jekyll posts on social media using front matter and IFTTT</a> — 28 Apr 2015</li>
+							
+						
+							
+								<li><a href="http://davidwalsh.name/sass-media-query">Write simple, elegant and maintainable media queries with Sass</a> — 05 Jan 2015</li>
+							
+						
+							
+								<li><a href="https://css-tricks.com/approaches-media-queries-sass/">Approaches to media queries in Sass</a> — 30 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/29/how-i-write-media-queries-in-sass.html">How I write media queries in Sass</a> — 29 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-media-query">
+					<summary>
+						<a name="media-query">media-query <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/01/writing-media-queries-for-retina-devices-with-include-media.html">Writing media queries for Retina devices with include-media</a> — 01 Feb 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-mobile">
+					<summary>
+						<a name="mobile">mobile <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-offline">
+					<summary>
+						<a name="offline">offline <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html">Supercharging Jekyll with a ServiceWorker</a> — 04 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-opengraph">
+					<summary>
+						<a name="opengraph">opengraph <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-pagination">
+					<summary>
+						<a name="pagination">pagination <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/10/adding-ajax-pagination-to-jekyll.html">Adding Ajax pagination to Jekyll</a> — 10 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-php">
+					<summary>
+						<a name="php">php <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-poole">
+					<summary>
+						<a name="poole">poole <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html">Building a bespoke commenting system for a static site</a> — 14 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-queries">
+					<summary>
+						<a name="queries">queries <span>(4)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/generating-alternative-stylesheets-browsers-media">Generating alternative stylesheets for browsers without @media</a> — 27 Jul 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/08/include-media-v1-3-released.html">include-media v1.3 released</a> — 08 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/05/20/include-media-v1-2-released.html">include-media v1.2 released</a> — 20 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/29/how-i-write-media-queries-in-sass.html">How I write media queries in Sass</a> — 29 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-query">
+					<summary>
+						<a name="query">query <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/sass-media-query">Write simple, elegant and maintainable media queries with Sass</a> — 05 Jan 2015</li>
+							
+						
+							
+								<li><a href="https://css-tricks.com/approaches-media-queries-sass/">Approaches to media queries in Sass</a> — 30 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-responsive">
+					<summary>
+						<a name="responsive">responsive <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html">Viewport sized typography with minimum and maximum sizes</a> — 18 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/13/experimenting-with-sass-and-grids.html">Experimenting with Sass and grids</a> — 13 Jan 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-retina">
+					<summary>
+						<a name="retina">retina <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/01/writing-media-queries-for-retina-devices-with-include-media.html">Writing media queries for Retina devices with include-media</a> — 01 Feb 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-robotstxt">
+					<summary>
+						<a name="robotstxt">robotstxt <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/20/google-news-and-sponsored-content.html">Google News and sponsored content</a> — 20 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-rss">
+					<summary>
+						<a name="rss">rss <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html">Thoughts on serving and monitoring a feed</a> — 20 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-sass">
+					<summary>
+						<a name="sass">sass <span>(10)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/generating-alternative-stylesheets-browsers-media">Generating alternative stylesheets for browsers without @media</a> — 27 Jul 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/29/exporting-breakpoints-from-css-to-javascript-with-include-media.html">Exporting breakpoints from CSS to JavaScript with include-media</a> — 29 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html">Viewport sized typography with minimum and maximum sizes</a> — 18 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/06/08/include-media-v1-3-released.html">include-media v1.3 released</a> — 08 Jun 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/05/20/include-media-v1-2-released.html">include-media v1.2 released</a> — 20 May 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/03/19/rapid-deployment-with-sass.html">Rapid deployment with Sass</a> — 19 Mar 2015</li>
+							
+						
+							
+								<li><a href="/blog/2015/01/13/experimenting-with-sass-and-grids.html">Experimenting with Sass and grids</a> — 13 Jan 2015</li>
+							
+						
+							
+								<li><a href="http://davidwalsh.name/sass-media-query">Write simple, elegant and maintainable media queries with Sass</a> — 05 Jan 2015</li>
+							
+						
+							
+								<li><a href="https://css-tricks.com/approaches-media-queries-sass/">Approaches to media queries in Sass</a> — 30 Dec 2014</li>
+							
+						
+							
+								<li><a href="/blog/2014/10/29/how-i-write-media-queries-in-sass.html">How I write media queries in Sass</a> — 29 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-scaffold">
+					<summary>
+						<a name="scaffold">scaffold <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/03/19/rapid-deployment-with-sass.html">Rapid deployment with Sass</a> — 19 Mar 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-seo">
+					<summary>
+						<a name="seo">seo <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/20/google-news-and-sponsored-content.html">Google News and sponsored content</a> — 20 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-serviceworker">
+					<summary>
+						<a name="serviceworker">serviceworker <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html">Supercharging Jekyll with a ServiceWorker</a> — 04 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-shiv">
+					<summary>
+						<a name="shiv">shiv <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/12/battling-with-ie8-html5-shiv-and-svg.html">Battling with IE8: HTML5 shiv and SVG</a> — 12 Feb 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-site">
+					<summary>
+						<a name="site">site <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/introduction-static-site-generators">An introduction to static site generators</a> — 21 May 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-snippet">
+					<summary>
+						<a name="snippet">snippet <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html">Collapsing code snippets on mobile devices</a> — 30 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-social">
+					<summary>
+						<a name="social">social <span>(2)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/28/sharing-jekyll-posts-on-social-media-using-front-matter-and-ifttt.html">Sharing Jekyll posts on social media using front matter and IFTTT</a> — 28 Apr 2015</li>
+							
+						
+							
+								<li><a href="/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html">Is LinkedIn ignoring your open graph meta tags?</a> — 04 Dec 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-specificity">
+					<summary>
+						<a name="specificity">specificity <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/03/22/what-bem-did-to-my-css-specificity.html">What BEM did to my CSS specificity</a> — 22 Mar 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-static">
+					<summary>
+						<a name="static">static <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="http://davidwalsh.name/introduction-static-site-generators">An introduction to static site generators</a> — 21 May 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-svg">
+					<summary>
+						<a name="svg">svg <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/02/12/battling-with-ie8-html5-shiv-and-svg.html">Battling with IE8: HTML5 shiv and SVG</a> — 12 Feb 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-tags">
+					<summary>
+						<a name="tags">tags <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/11/16/creating-a-tags-page-in-jekyll.html">Creating a tags page in Jekyll</a> — 16 Nov 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-twitter">
+					<summary>
+						<a name="twitter">twitter <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/04/27/bem-wrappers-and-nesting-and-why-i-love-twitter.html">BEM, wrappers and nesting (and why I love Twitter)</a> — 27 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-typography">
+					<summary>
+						<a name="typography">typography <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html">Viewport sized typography with minimum and maximum sizes</a> — 18 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-video">
+					<summary>
+						<a name="video">video <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2014/10/09/the-story-behind-my-website.html">The story behind my website</a> — 09 Oct 2014</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-viewport">
+					<summary>
+						<a name="viewport">viewport <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html">Viewport sized typography with minimum and maximum sizes</a> — 18 Jun 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
+				<details id="tag-wordpress">
+					<summary>
+						<a name="wordpress">wordpress <span>(1)</span></a>
+					</summary>
+					<ul>
+						
+							
+								<li><a href="https://css-tricks.com/thoughts-on-an-api-first-wordpress/">Thoughts on an API-First WordPress</a> — 21 Apr 2015</li>
+							
+						
+					</ul>					
+				</details>
+			
 		</div>
 		
-		{% include googleAnalytics.html %}
-		{% include blog/footer.html %}
+		<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-54012006-1', 'auto');
+  ga('send', 'pageview');
+</script>
+		<footer class="blog__footer">
+	Generated by <a href="http://jekyllrb.com/">Jekyll</a>. Hosted by <a href="https://github.com/">GitHub</a>.<br/>
+	<a href="http://feeds.eduardoboucas.com/eduardoboucas">
+		<svg  class="blog-footer__icon--rss">
+	<use xlink:href="#icn--rss"></use>
+</svg>
+	</a>
+</footer>
 
 		<script>
 		window.addEventListener("load", function () {

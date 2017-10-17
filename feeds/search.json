@@ -1,14 +1,251 @@
----
-layout: null
----
 [
-  {% for post in site.posts %}
+  
     {
-      "title"    : "{{ post.title | escape }}",
-      "category" : "{{ post.category }}",
-      "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.baseurl }}{{ post.url }}",
-      "date"     : "{{ post.date | date: '%d %b %Y' }}"
-    } {% unless forloop.last %},{% endunless %}
-  {% endfor %}
+      "title"    : "Creating a BEMIT grid system with include-media",
+      "category" : "",
+      "tags"     : "include-media, grid, bem, bemit",
+      "url"      : "/blog/2015/08/17/creating-a-bemit-grid-system-with-include-media.html",
+      "date"     : "17 Aug 2015"
+    } ,
+  
+    {
+      "title"    : "Generating alternative stylesheets for browsers without @media",
+      "category" : "",
+      "tags"     : "include-media, sass, media, queries",
+      "url"      : "/blog/2015/07/27/generating-alternative-style-sheets-for-browsers-without-media.html",
+      "date"     : "27 Jul 2015"
+    } ,
+  
+    {
+      "title"    : "Exporting breakpoints from CSS to JavaScript with include-media",
+      "category" : "",
+      "tags"     : "include-media, sass, javascript, json",
+      "url"      : "/blog/2015/06/29/exporting-breakpoints-from-css-to-javascript-with-include-media.html",
+      "date"     : "29 Jun 2015"
+    } ,
+  
+    {
+      "title"    : "Viewport sized typography with minimum and maximum sizes",
+      "category" : "",
+      "tags"     : "responsive, viewport, typography, sass",
+      "url"      : "/blog/2015/06/18/viewport-sized-typography-with-minimum-and-maximum-sizes.html",
+      "date"     : "18 Jun 2015"
+    } ,
+  
+    {
+      "title"    : "include-media v1.3 released",
+      "category" : "",
+      "tags"     : "include-media, sass, media, queries",
+      "url"      : "/blog/2015/06/08/include-media-v1-3-released.html",
+      "date"     : "08 Jun 2015"
+    } ,
+  
+    {
+      "title"    : "Supercharging Jekyll with a ServiceWorker",
+      "category" : "",
+      "tags"     : "serviceworker, javascript, jekyll, offline, cache",
+      "url"      : "/blog/2015/06/04/supercharging-jekyll-with-a-serviceworker.html",
+      "date"     : "04 Jun 2015"
+    } ,
+  
+    {
+      "title"    : "An introduction to static site generators",
+      "category" : "",
+      "tags"     : "jekyll, static, site, generator",
+      "url"      : "/blog/2015/05/21/an-introduction-to-static-site-generators.html",
+      "date"     : "21 May 2015"
+    } ,
+  
+    {
+      "title"    : "include-media v1.2 released",
+      "category" : "",
+      "tags"     : "include-media, sass, media, queries",
+      "url"      : "/blog/2015/05/20/include-media-v1-2-released.html",
+      "date"     : "20 May 2015"
+    } ,
+  
+    {
+      "title"    : "Rethinking the commenting system for my Jekyll site",
+      "category" : "",
+      "tags"     : "jekyll, comments, github",
+      "url"      : "/blog/2015/05/11/rethinking-the-commenting-system-for-my-jekyll-site.html",
+      "date"     : "11 May 2015"
+    } ,
+  
+    {
+      "title"    : "Sharing Jekyll posts on social media using front matter and IFTTT",
+      "category" : "",
+      "tags"     : "jekyll, social, media, ifttt",
+      "url"      : "/blog/2015/04/28/sharing-jekyll-posts-on-social-media-using-front-matter-and-ifttt.html",
+      "date"     : "28 Apr 2015"
+    } ,
+  
+    {
+      "title"    : "BEM, wrappers and nesting (and why I love Twitter)",
+      "category" : "",
+      "tags"     : "bem, html, twitter",
+      "url"      : "/blog/2015/04/27/bem-wrappers-and-nesting-and-why-i-love-twitter.html",
+      "date"     : "27 Apr 2015"
+    } ,
+  
+    {
+      "title"    : "Thoughts on an API-First WordPress",
+      "category" : "",
+      "tags"     : "wordpress, api, api-first, cms",
+      "url"      : "/blog/2015/04/21/thoughts-on-an-api-first-wordpress.html",
+      "date"     : "21 Apr 2015"
+    } ,
+  
+    {
+      "title"    : "Google News and sponsored content",
+      "category" : "",
+      "tags"     : "google-news, robotstxt, seo",
+      "url"      : "/blog/2015/04/20/google-news-and-sponsored-content.html",
+      "date"     : "20 Apr 2015"
+    } ,
+  
+    {
+      "title"    : "What BEM did to my CSS specificity",
+      "category" : "",
+      "tags"     : "css, specificity, bem",
+      "url"      : "/blog/2015/03/22/what-bem-did-to-my-css-specificity.html",
+      "date"     : "22 Mar 2015"
+    } ,
+  
+    {
+      "title"    : "Rapid deployment with Sass",
+      "category" : "",
+      "tags"     : "sass, scaffold, grunt",
+      "url"      : "/blog/2015/03/19/rapid-deployment-with-sass.html",
+      "date"     : "19 Mar 2015"
+    } ,
+  
+    {
+      "title"    : "Battling with IE8: HTML5 shiv and SVG",
+      "category" : "",
+      "tags"     : "ie8, html5, shiv, svg",
+      "url"      : "/blog/2015/02/12/battling-with-ie8-html5-shiv-and-svg.html",
+      "date"     : "12 Feb 2015"
+    } ,
+  
+    {
+      "title"    : "Writing media queries for Retina devices with include-media",
+      "category" : "",
+      "tags"     : "retina, include-media, media-query",
+      "url"      : "/blog/2015/02/01/writing-media-queries-for-retina-devices-with-include-media.html",
+      "date"     : "01 Feb 2015"
+    } ,
+  
+    {
+      "title"    : "A cautious and calculated venture into Flexbox",
+      "category" : "",
+      "tags"     : "flexbox, html5, css",
+      "url"      : "/blog/2015/01/22/a-cautious-and-calculated-venture-into-flexbox.html",
+      "date"     : "22 Jan 2015"
+    } ,
+  
+    {
+      "title"    : "Experimenting with Sass and grids",
+      "category" : "",
+      "tags"     : "sass, css, responsive, grid",
+      "url"      : "/blog/2015/01/13/experimenting-with-sass-and-grids.html",
+      "date"     : "13 Jan 2015"
+    } ,
+  
+    {
+      "title"    : "Write simple, elegant and maintainable media queries with Sass",
+      "category" : "",
+      "tags"     : "include-media, sass, media, query",
+      "url"      : "/blog/2015/01/05/write-simple-elegant-and-maintainable-media-queries-with-sass.html",
+      "date"     : "05 Jan 2015"
+    } ,
+  
+    {
+      "title"    : "Approaches to media queries in Sass",
+      "category" : "",
+      "tags"     : "include-media, sass, media, query",
+      "url"      : "/blog/2014/12/30/approaches-to-media-queries-in-sass.html",
+      "date"     : "30 Dec 2014"
+    } ,
+  
+    {
+      "title"    : "Building a bespoke commenting system for a static site",
+      "category" : "",
+      "tags"     : "javascript, php, jekyll, poole, disqus, honeypot, markdown",
+      "url"      : "/blog/2014/12/14/building-a-bespoke-commenting-system-for-a-static-site.html",
+      "date"     : "14 Dec 2014"
+    } ,
+  
+    {
+      "title"    : "Including and managing images in Jekyll",
+      "category" : "",
+      "tags"     : "jekyll, assets, images, html5, figure, figcaption",
+      "url"      : "/blog/2014/12/07/including-and-managing-images-in-jekyll.html",
+      "date"     : "07 Dec 2014"
+    } ,
+  
+    {
+      "title"    : "Is LinkedIn ignoring your open graph meta tags?",
+      "category" : "",
+      "tags"     : "linkedin, opengraph, social, butler, html, javascript, php, ajax",
+      "url"      : "/blog/2014/12/04/is-linkedin-ignoring-your-open-graph-meta-tags.html",
+      "date"     : "04 Dec 2014"
+    } ,
+  
+    {
+      "title"    : "Collapsing code snippets on mobile devices",
+      "category" : "",
+      "tags"     : "code, snippet, expandable, html5, javascript, mobile",
+      "url"      : "/blog/2014/11/30/collapsing-code-snippets-on-mobile-devices.html",
+      "date"     : "30 Nov 2014"
+    } ,
+  
+    {
+      "title"    : "Thoughts on serving and monitoring a feed",
+      "category" : "",
+      "tags"     : "blog, rss, feed, feedburner, jekyll",
+      "url"      : "/blog/2014/11/20/thoughts-on-serving-and-monitoring-a-feed.html",
+      "date"     : "20 Nov 2014"
+    } ,
+  
+    {
+      "title"    : "Creating a tags page in Jekyll",
+      "category" : "",
+      "tags"     : "jekyll, tags, html5, details",
+      "url"      : "/blog/2014/11/16/creating-a-tags-page-in-jekyll.html",
+      "date"     : "16 Nov 2014"
+    } ,
+  
+    {
+      "title"    : "Adding Ajax pagination to Jekyll",
+      "category" : "",
+      "tags"     : "jekyll, pagination, backbonejs",
+      "url"      : "/blog/2014/11/10/adding-ajax-pagination-to-jekyll.html",
+      "date"     : "10 Nov 2014"
+    } ,
+  
+    {
+      "title"    : "How I write media queries in Sass",
+      "category" : "",
+      "tags"     : "sass, css, media, queries",
+      "url"      : "/blog/2014/10/29/how-i-write-media-queries-in-sass.html",
+      "date"     : "29 Oct 2014"
+    } ,
+  
+    {
+      "title"    : "How I used Jekyll on my Backbone.js website",
+      "category" : "",
+      "tags"     : "eduardoboucas.com, jekyll, backbonejs",
+      "url"      : "/blog/2014/10/25/how-i-used-jekyll-on-my-backbonejs-website.html",
+      "date"     : "25 Oct 2014"
+    } ,
+  
+    {
+      "title"    : "The story behind my website",
+      "category" : "",
+      "tags"     : "eduardoboucas.com, video, backbonejs",
+      "url"      : "/blog/2014/10/09/the-story-behind-my-website.html",
+      "date"     : "09 Oct 2014"
+    } 
+  
 ]
