@@ -1,4 +1,4 @@
-[![Glitched image of Eduardo in a chair](https://raw.githubusercontent.com/eduardoboucas/v1/gh-pages/assets/images/glitch.png)](https://eduardoboucas.com)
+[![Glitched image of Eduardo in a chair](assets/images/glitch.png)](https://eduardoboucas.com)
 
 # [eduardoboucas.com](https://eduardoboucas.com)
 
