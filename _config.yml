@@ -1,0 +1,55 @@
+#########################
+#						#
+#   General settings	#
+#						#
+#########################
+author: Eduardo Bouças
+email: mail@eduardoboucas.com
+feed_url: "http://feeds.eduardoboucas.com/eduardoboucas"
+facebook_url: "https://www.facebook.com/eduardoboucas"
+twitter_username: eduardoboucas
+github_username:  eduardoboucas
+googleAnalyticsId: UA-54012006-1
+
+#########################
+#						#
+#  Main site settings	#
+#						#
+#########################
+site_title: Eduardo Boucas - Web Developer from London
+site_description: "A passionate and creative full-stack web developer that thinks code and numbers, but breathes art and design. Responsible and responsive. Terrible dancer."
+site_url: "https://eduardoboucas.com"
+
+#########################
+#						#
+#    Blog settings		#
+#						#
+#########################
+blog_title: Eduardo saying things
+blog_description: "My blog about web, my experience as a sharp programmer and a terrible dancer."
+blog_url: "/blog"
+markdown: kramdown
+
+comment_post_url: https://aws.bouc.as/jekyll-discuss/comments
+
+# Pagination
+paginate: 10
+paginate_path: "blog/page:num"
+gems: [jekyll-paginate]
+collections:
+  portfolio:
+    output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      author: "Eduardo Bouças"
+      enable_comments: true
+
+excerpt_separator: <!--more-->
+
+gems:
+  - jekyll-redirect-from
